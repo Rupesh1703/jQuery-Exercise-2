@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script src="Script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+           <table class="table table-responsive w-100" id="tableData">
+            <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First Name</th>
+                      <th scope="col">Last Name</th>
+                      <th scope="col">Background Color</th>
+                    </tr>
+            </thead>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div >
+                                <input type="text"class="form-control form-control-lg" id="firstName" autocomplete="off" placeholder="First Name" />
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                              <input type="text" class="form-control form-control-lg" id="lastName"  autocomplete="off" placeholder="Last Name" />
+                            </div>
+                        </td>
+                        <td>
+                            <div >
+                                <input type="text" class="form-control form-control-lg" id="backgroundColor"  autocomplete="off" placeholder="#background color" />
+                            </div>
+                        </td>
+                        <td>
+                            <div >
+                                <div >
+                                    <select name="fontSize" id="fontSize">
+                                        <option selected disabled value="">Text Size</option>
+                                        <option value="Large">Large</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Small">Small</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-md btn-outline-primary" id="addUser"
+                                    onclick="addUser()">Add</button>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" name="UserSelect" id="UserSelect" onclick="UserSelect()">
+                            </div>
+                        </td>
+                        <td>Select All</Select></td>
+                        <td id="rowsSelected">Total 0 selected row(s)</td>
+                        <td>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-md btn-outline-primary" id="deleteUser"
+                                    onclick="deleteUsers()" disabled>Delete</button>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div id="updateSection" style="display:none" class="mt-5">
+                    <p>update above selected Items</p>
+                    <table>
+                        <tr>
+                            <td>
+                                <div >
+                                    <input type="text" class="form-control" id="updateBackgroundColor" placeholder="#background color">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div >
+                                        <select name="updateTextSize" id="updateTextSize">
+                                            <option selected disabled value="">Text Size</option>
+                                            <option value="Large">Large</option>
+                                            <option value="Medium">Medium</option>
+                                            <option value="Small">Small</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-md btn-outline-primary" id="updateButton"
+                                            onclick="update()">Apply</button>
+                                </div>
+                            </td>                 
+                        </tr>
+                    </table>
+                </div>
+             </div>
+</body>
+
+</html>

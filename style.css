@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#addUser{
+    margin-bottom: 50px;
+}
+
+#firstName{
+    display: inline-block;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#lastName{
+    width: 50%;
+    margin-bottom: 50px;
+}
+#render{
+    margin-bottom: 50px;
+}
+
+#updateUser{
+    display: none;
+    margin-bottom: 50px;
+
+}
